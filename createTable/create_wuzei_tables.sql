@@ -85,3 +85,156 @@ CREATE TABLE IF NOT EXISTS `nt_users` (
   KEY `tgid` (`tgid`),
   KEY `loginCount` (`loginCount`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7438164 ;
+
+DROP TABLE IF EXISTS `crack_7k7k`;
+CREATE TABLE `crack_7k7k` (
+  `id` int(11) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `plain_pwd`  varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+DROP TABLE IF EXISTS `crack_qq`;
+CREATE TABLE `crack_qq` (
+  `id` int(11) NOT NULL,
+  `qq` varchar(50) NOT NULL,
+  `plain_pwd`  varchar(200) NOT NULL,
+  `status` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+INSERT INTO `source_info` ( `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES("crack_qq",20617616,"qqdatabases",NULL,now(),NULL);
+
+
+DROP TABLE IF EXISTS `crack_id_card`;
+CREATE TABLE `crack_id_card` (
+  `id` int(11) NOT NULL,
+  `full_name` varchar(50) NOT NULL,
+  `id_card_num`  varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+INSERT INTO `source_info` ( `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES("crack_id_card",11999999,"1200W身份证.zip",NULL,now(),NULL);
+
+
+DROP TABLE IF EXISTS `crack_duduniu`;
+CREATE TABLE `crack_duduniu` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(50) NOT NULL,
+  `plain_pwd`  varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+
+INSERT INTO `source_info` ( `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES("crack_duduniu", 16282971,"嘟嘟牛_66277.rar",NULL,now(),NULL);
+
+
+DROP TABLE IF EXISTS `crack_pconline`;
+CREATE TABLE `crack_pconline` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `plain_pwd`  varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(9,"crack_pconline", 5443597,"太平洋电脑网.zip",NULL,now(),NULL);
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(11,"crack_xiaomi_com", 8281387,"小米数据库文件（信息被爆）.rar",NULL,now(),NULL);
+
+
+DROP TABLE IF EXISTS `crack_36wmodel`;
+CREATE TABLE `crack_36wmodel` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `encrypt_pwd`  varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `regip` varchar(20) NOT NULL,
+  `regdate`  varchar(20) NOT NULL,
+  `salt` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+DROP TABLE IF EXISTS `crack_baihe`;
+CREATE TABLE `crack_baihe` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `encrypt_pwd`  varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `regip` varchar(20) NOT NULL,
+  `regdate`  varchar(20) NOT NULL,
+  `salt` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(16,"crack_36wmodel", 361079,"36w-模特.rar",NULL,now(),NULL);
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(17,"crack_baihe", 34966,"百合网.7z",NULL,now(),NULL);
+
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 姓名 full_name varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 性别 sex varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 身份证 id_card_num varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 民族 ethnic varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 学历 edu varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 专业 major varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 毕业学校 graduated varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 院系 college varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 政治面貌 political_status varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 生源地 source_place varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 学生类型 student_type varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 考生号 candidate_num varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 学号 student_num varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 入学日期 enrollment_time varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 毕业时间 graduation_time varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 移动电话 mobile_num varchar(255);
+ALTER TABLE crack_daxuesheng CHANGE COLUMN 邮箱 email varchar(255);
+
+ALTER TABLE crack_dnf CHANGE COLUMN password plain_pwd varchar(255);
+INSERT INTO `source_info` (`id`, `table_name`,`is_dealed`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(18,"crack_cnzz", "NO",946454,"cnzz数据库%2B用户资料导出.zip",NULL,now(),NULL);
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(19,"crack_dnf", 7333041,"dnf_database.zip",NULL,now(),NULL);
+
+
+select concat("dnf_",id) as "_id", password as  "plain_pwd" ,  qq as "qq" , 19 as "source" from crack_dnf limit 10;
+
+
+DROP TABLE IF EXISTS `crack_adobe`;
+CREATE TABLE `crack_adobe` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `email` varchar(200) NOT NULL,
+  `encrypt_pwd`  varchar(100) NOT NULL,
+  `hint` varchar(120) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(20,"crack_adobe", 152989496,"adobe.tar.gz",NULL,now(),NULL);
+
+
+
+DROP TABLE IF EXISTS `crack_hzcy`;
+CREATE TABLE `crack_hzcy` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `full_name` varchar(50) DEFAULT NULL,
+   `encrypt_pwd`  varchar(100) NOT NULL,
+  `email` varchar(200)  DEFAULT  NULL,
+  `mobile_num` varchar(120) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 collate utf8_general_ci;
+
+INSERT INTO `source_info` (`id`, `table_name`,`leak_mount`, `leak_sources`,`leak_time`,`insert_time`,`desc`)
+VALUES(21,"crack_hzcy", 45874,"杭州长运.zip",NULL,now(),NULL);
